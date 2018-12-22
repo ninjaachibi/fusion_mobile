@@ -1,32 +1,68 @@
+span{
+  display:inline-block;
+  vertical-align: middle;
+  line-height:normal;
+}
+
+
 .App {
   text-align: center;
+  background-color:#DEDEDE;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.Header{
+  margin-bottom:10px;
+  padding-left:0px;
+  padding-top:50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.PopularGroceries{
+  margin-bottom:30px;
+  padding-left:0px;
 }
 
-.App-link {
-  color: #61dafb;
+.PopularGroceryListItem{
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ViewMorePopular{
+  background-color:#DEDEDE;
+  border-color:rgb(106,106,106);
+  color:rgb(106,106,106);
+  border-width:2.5px;
+  margin-bottom:100px;
+  margin-top:-15px;
+}
+
+.AllGroceries{
+  background-color:#444444;
+  color:white;
+  height:300px;
+  line-height:300px;
+}
+
+.ShopByRecipe{
+  background-color:rgb(211,175,5);
+  color:white;
+  height:150px;
+  line-height:150px;
+}
+
+.MeatAndChicken{
+  background-color:rgb(183,183,183);
+  color:black;
+  height:150px;
+  line-height:150px;
+}
+
+.SnacksAndDrinks{
+  background-color:#444444;
+  color:white;
+  height:150px;
+  line-height:150px;
+}
+
+.ThisIsTheGrid{
+  height:300px;
+  line-height:300px;
 }
