@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Categories from './categories.js';
 import './App.css';
 import {Grid,Row,Col,Button} from 'react-bootstrap';
 import axios from 'axios';
@@ -66,6 +67,7 @@ class App extends Component {
           </Grid>
         </div>
         <Button className="ViewMorePopular">VIEW MORE</Button>
+        <Categories></Categories>
       </div>
     );
   }
