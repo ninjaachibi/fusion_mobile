@@ -1,9 +1,14 @@
 .Card{
-  border:solid 1px;
   height: 200px;
   margin-bottom: 20px;
   line-height:200px;
+  position:relative;
+  opacity: 0.3;
 }
+.Card:hover{
+  opacity:0.7;
+}
+
 
 span{
   display:inline-block;
@@ -12,7 +17,24 @@ span{
 }
 
 h1{
-  text-align:left;
+  text-align:center;
   margin-left: 10px;
   margin-bottom:20px;
+}
+
+.img-height{
+  height:200px;
+  width:250px;
+}
+
+
+.text-block {
+  position: absolute;
+  bottom: 100px;
+  width:100%;
+  text-align:center;
+  color: black;
+  padding-left: 0px;
+  padding-right: 0px;
+  opacity:1;
 }

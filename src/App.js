@@ -1,14 +1,57 @@
 import React, { Component } from 'react';
 import Categories from './categories.js';
+import Product from './product.js';
 import './App.css';
 import {Grid,Row,Col,Button} from 'react-bootstrap';
 import axios from 'axios';
 
+var populars = [{name:'hi'},{name:'hi'},{name:'hi'},{name:'hi'}];
+for(var i = 0; i < 100; i++){
+  populars.push({name:'hi'})
+};
+
+class PopularItem extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+      <div>
+        <h2>Most Popular Groceries</h2>
+        <Row className="show-grid">
+        {this.props.populars.slice(0,this.props.iterateamount).map((item) => 
+          
+            <Col className="PopularGroceryListItem" xs={3} md={3}>
+            <img src={item.imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail img-thumbnail-popular"></img>
+            <p>{item.name}</p> 
+            </Col>
+          
+        )}
+        </Row>
+      </div>
+    )
+  }
+}
+
 class App extends Component {
 
-  state = {
-    populars:[{name:'hi'},{name:'hi'},{name:'hi'},{name:'hi'}]
+constructor(props){
+  super(props);
+  this.state = {    
+    populars:populars,
+    viewmore:4,
+  };
+
+  this.handleClick = this.handleClick.bind(this);
+}
+
+  handleClick() {
+    this.setState(state => ({
+      viewmore: this.state.viewmore + 4
+    }));
   }
+
   componentWillMount() {
     axios.get('https://golden-express.herokuapp.com/browse?aisle=meat')
       .then(res => {
@@ -45,29 +88,12 @@ class App extends Component {
         </div>
         <div className="PopularGroceries container">
           <Grid>
-            <Row className="show-grid">
-              <h2>Most Popular Groceries</h2>
-              <Col className="PopularGroceryListItem" xs={3} md={3}>
-                <img src={this.state.populars[0].imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail"></img>
-                <p>{this.state.populars[0].name}</p> 
-              </Col>
-              <Col className="PopularGroceryListItem" xs={3} md={3}>
-                <img src={this.state.populars[1].imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail"></img>
-                <p>{this.state.populars[1].name}</p>
-              </Col>              
-              <Col className="PopularGroceryListItem" xs={3} md={3}>
-                <img src={this.state.populars[2].imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail"></img>  
-                <p>{this.state.populars[2].name}</p>
-              </Col>
-              <Col className="PopularGroceryListItem" xs={3} md={3}>
-                <img src={this.state.populars[3].imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail"></img>  
-                <p>{this.state.populars[3].name}</p>
-              </Col>
-            </Row>
+            <PopularItem populars={this.state.populars} iterateamount = {this.state.viewmore}/>
           </Grid>
         </div>
-        <Button className="ViewMorePopular">VIEW MORE</Button>
+        <Button onClick={this.handleClick} className="ViewMorePopular">VIEW MORE</Button>
         <Categories></Categories>
+        <Product item={this.state.populars[0]}/>
       </div>
     );
   }

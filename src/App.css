@@ -22,7 +22,17 @@ span{
 }
 
 .PopularGroceryListItem{
+  height:200px;
+  width:250px;
+  margin-bottom:60px;
+  margin-right:20px;
+  margin-left:20px;
   
+}
+
+.img-thumbnail-popular{
+  height:200px;
+  width:250px;
 }
 
 .ViewMorePopular{
@@ -30,7 +40,7 @@ span{
   border-color:rgb(106,106,106);
   color:rgb(106,106,106);
   border-width:2.5px;
-  margin-bottom:100px;
+  margin-bottom:50px;
   margin-top:-15px;
 }
 
@@ -39,6 +49,8 @@ span{
   color:white;
   height:300px;
   line-height:300px;
+  border-right:solid 2.5px;
+  border-color:white;
 }
 
 .ShopByRecipe{
@@ -46,6 +58,7 @@ span{
   color:white;
   height:150px;
   line-height:150px;
+
 }
 
 .MeatAndChicken{
@@ -53,6 +66,10 @@ span{
   color:black;
   height:150px;
   line-height:150px;
+  border:solid 2.5px;
+  border-color:white;
+  border-left:0px;
+  border-bottom:0px;
 }
 
 .SnacksAndDrinks{
@@ -60,6 +77,9 @@ span{
   color:white;
   height:150px;
   line-height:150px;
+  border-top:solid 2.5px;
+  border-color:white;
+
 }
 
 .ThisIsTheGrid{

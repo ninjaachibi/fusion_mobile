@@ -1,0 +1,16 @@
+.AddToCart{
+  background-color:#DEDEDE;
+  border-color:rgb(106,106,106);
+  color:rgb(106,106,106);
+  border-width:2.5px;
+  margin-top:20px;
+  margin-bottom:25px;
+}
+
+.ProductInfo{
+  background-color:white;
+  border:solid 3px;
+  border-color:rgb(106,106,106);
+  margin-top:80px;
+
+}
