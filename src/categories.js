@@ -14,7 +14,7 @@ class Categories extends Component{
   render(){
     return(
       <div className="categories container">
-        <h1>Categories</h1>
+        <h2>Categories</h2>
         <Grid>
           <Row className="show-grid">
             {this.categories.map((item) =>

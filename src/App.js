@@ -24,7 +24,8 @@ class PopularItem extends Component{
           
             <Col className="PopularGroceryListItem" xs={3} md={3}>
             <img src={item.imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail img-thumbnail-popular"></img>
-            <p>{item.name}</p> 
+            <p className="Price">{item.price}</p>
+            <p className="PopularName">{item.name}</p> 
             </Col>
           
         )}
@@ -71,15 +72,15 @@ constructor(props){
               <Col xs={6} md={6}>
                 <Row className="show-grid">
                   <Col className="ShopByRecipe" xs={12} md={12}>
-                    <p>Shop By Recipe</p>
+                    <p className="ShopByRecipeText">Shop By Recipe</p>
                   </Col>
                 </Row>
                 <Row className="show-grid">
                   <Col className="MeatAndChicken" xs={6} md={6}>
-                    <p>Meat and Chicken</p>
+                    <p className="MeatAndSnackText">Meat and Chicken</p>
                   </Col>
                   <Col className="SnacksAndDrinks" xs={6} md={6}>
-                    <p>Snacks and Drinks</p>
+                    <p className="MeatAndSnackText">Snacks and Drinks</p>
                   </Col>
                 </Row> 
               </Col>

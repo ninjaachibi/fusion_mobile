@@ -2,8 +2,13 @@ span{
   display:inline-block;
   vertical-align: middle;
   line-height:normal;
+  font-weight:700;
+  font-size:52px;
 }
 
+h2{
+  font-weight:600;
+}
 
 .App {
   text-align: center;
@@ -28,6 +33,22 @@ span{
   margin-right:20px;
   margin-left:20px;
   
+}
+
+.Price{
+  color:white;
+  background-color:black;
+  position:absolute;
+  bottom:-5px;
+  left:20px;
+  padding-right:10px;
+  padding-top:5px;
+  border-radius:3px;
+  font-weight:600;
+}
+
+.PopularName{
+  font-weight:900;
 }
 
 .img-thumbnail-popular{
@@ -61,6 +82,11 @@ span{
 
 }
 
+.ShopByRecipeText{
+  font-size:32px;
+  font-weight:700;
+}
+
 .MeatAndChicken{
   background-color:rgb(183,183,183);
   color:black;
@@ -82,7 +108,13 @@ span{
 
 }
 
+.MeatAndSnackText{
+  font-size:24px;
+  font-weight:700;
+}
+
 .ThisIsTheGrid{
   height:300px;
   line-height:300px;
 }
+

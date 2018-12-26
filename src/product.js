@@ -12,7 +12,7 @@ class Product extends Component{
   render(){
     return(
       <div className="product container">
-        <h1>Product</h1>
+        <h2>Product</h2>
         <Grid>
           <Row className="show-grid">
             <Col md={6} xs={6}>
