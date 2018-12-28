@@ -42,6 +42,7 @@ constructor(props){
   this.state = {    
     populars:populars,
     viewmore:4,
+    category:null,
   };
 
   this.handleClick = this.handleClick.bind(this);
@@ -52,6 +53,8 @@ constructor(props){
       viewmore: this.state.viewmore + 4
     }));
   }
+
+
 
   componentWillMount() {
     axios.get('https://golden-express.herokuapp.com/browse?aisle=meat')
