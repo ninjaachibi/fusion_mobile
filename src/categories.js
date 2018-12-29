@@ -3,9 +3,9 @@ import './categories.css';
 import {Grid,Row,Col,Button} from 'react-bootstrap';
 import axios from 'axios';
 
-var category = [{name:'hi'},{name:'hi'},{name:'hi'},{name:'hi'}];
+var category = [{name:''},{name:''},{name:''},{name:''}];
 for(var i = 0; i < 100; i++){
-  category.push({name:'hi'})
+  category.push({name:''})
 };
 
 
@@ -83,7 +83,7 @@ class Categories extends Component{
           <h3>{this.state.categoryname}</h3>>
           {this.state.category.slice(0,this.state.category.length).map((item) => 
               <Col className="PopularGroceryListItem" xs={3} md={3}>
-              <img src={item.imgURI} alt="https://via.placeholder.com/150" className="img-thumbnail img-thumbnail-popular"></img>
+              <img src={item.imgURI} alt="Loading Photo..." className="img-thumbnail img-thumbnail-popular"></img>
               <p className="Price">{item.price}</p>
               <p className="PopularName">{item.name}</p> 
               </Col>
