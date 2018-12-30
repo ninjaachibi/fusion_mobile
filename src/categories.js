@@ -4,9 +4,6 @@ import {Grid,Row,Col} from 'react-bootstrap';
 import axios from 'axios';
 
 var category = [];
-//for(var i = 0; i < 20; i++){
-//  category.push({name:'',imgURI:'https://via.placeholder.com/300'})
-//};
 
 class Categories extends Component{ 
   constructor(props){
@@ -17,12 +14,25 @@ class Categories extends Component{
     this.state = {
       category: category,
       categoryname: "",
+      loaded: false,
+      loadedcounter:0,
+    }
+    this.imagesLoaded = this.imagesLoaded.bind(this)
+  }
+
+  imagesLoaded(){
+    var a = this.state.loadedcounter + 1
+    this.setState({loadedcounter: a})
+    if(a >= this.state.category.length-3){
+      this.setState({loaded:true});
     }
   }
 
   handleCategoryClick(props){
     axios.get('https://golden-express.herokuapp.com/browse?aisle=' + props.toLowerCase())
-      .then(res => {
+      .then(async res => {
+        this.setState({loaded:false,loadedcounter:0})
+        const result = await res;
         const category = res.data;
         this.setState({category:category.items,categoryname:props});
       })
@@ -36,23 +46,26 @@ class Categories extends Component{
           <Row className="show-grid">
             {this.categories.map((item) =>
               <Col xs={4} md={4}>
-                <div class="Card">
+                <div className="Card">
                   <img src={item.img} alt="Loading..." className="img-thumbnail img-height"></img>
                 </div>
                 <h3 className="text-block" onClick={() => this.handleCategoryClick(item.name)}>{item.name}</h3>
               </Col>
             )}
           </Row>
-          <Row className="show-grid">
-          <h3>{this.state.categoryname}</h3>>
-          {this.state.category.slice(0,this.state.category.length).map((item) => 
-              <Col className="PopularGroceryListItem" xs={3} md={3}>
-              <img src={item.imgURI} alt="Loading..." className="img-thumbnail img-thumbnail-popular"></img>
-              <p className="Price">{item.price}</p>
-              <p className="PopularName">{item.name}</p> 
-              </Col>
-          )}
-          </Row>
+          
+          <div className={this.state.loaded ? '' : 'hidden'}>
+            <Row className="show-grid">
+              <h3>{this.state.categoryname}</h3>>
+              {this.state.category.slice(0,this.state.category.length).map((item) => 
+                  <Col className="PopularGroceryListItem" xs={3} md={3}>
+                  <img onLoad={this.imagesLoaded} src={item.imgURI} alt="Loading..." className="img-thumbnail img-thumbnail-popular"></img>
+                  <p className="Price">{item.price}</p>
+                  <p className="PopularName">{item.name}</p> 
+                  </Col>
+              )}
+            </Row>
+          </div>
         </Grid>
       </div>
     )

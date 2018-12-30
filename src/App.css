@@ -121,3 +121,7 @@ h2 {
   height: 300px;
   line-height: 300px;
 }
+
+.hidden{
+  visibility: hidden;
+}

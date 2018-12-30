@@ -5,13 +5,7 @@ import PopularItems from './popular.js';
 import Homepage from './homepage.js';
 import './App.css';
 
-var populars = [{name:'hi'},{name:'hi'},{name:'hi'},{name:'hi'}];
-for(var i = 0; i < 100; i++){
-  populars.push({name:'hi'})
-};
-
 class App extends Component {
-
 
   render() {
     return (

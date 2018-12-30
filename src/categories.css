@@ -41,3 +41,7 @@ h1 {
   opacity: 1;
   font-weight: 700;
 }
+
+.hidden{
+  visibility: hidden;
+}
