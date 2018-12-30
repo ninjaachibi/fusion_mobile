@@ -1,0 +1,26 @@
+.NavBar {
+  background-color: rgb(211, 175, 5);
+
+}
+
+.white {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.navbar-inverse .navbar-brand:hover {
+  color: #eee6e6;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #eee6e6;
+
+}

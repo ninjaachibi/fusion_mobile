@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './product.css';
-import {Grid,Row,Col,Button,FormGroup,FormControl,ControlLabel,Form,SplitButton,MenuItem} from 'react-bootstrap';
-import axios from 'axios';
+import {Grid,Row,Col,Button,SplitButton,MenuItem} from 'react-bootstrap';
 
 class Product extends Component{ 
   

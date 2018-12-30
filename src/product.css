@@ -1,38 +1,38 @@
-.AddToCart{
-  background-color:#DEDEDE;
-  border-color:rgb(106,106,106);
-  color:rgb(106,106,106);
-  border-width:2.5px;
-  margin-top:20px;
-  margin-bottom:25px;
+.AddToCart {
+  background-color: #DEDEDE;
+  border-color: rgb(106, 106, 106);
+  color: rgb(106, 106, 106);
+  border-width: 2.5px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
-.ProductInfo{
-  background-color:white;
-  border:solid 3px;
-  border-color:rgb(106,106,106);
-  height:270px;
-  margin-bottom:100px;
-
-}
-
-.Quantity{
-  margin-right:20px;
-}
-
-.QuantityLabel{
-  margin-left:20px;
-  margin-right:5px;
-}
-
-.img-thumbnail-product{
-  height:270px;
-  width:100%;
-  object-fit:contain;
+.ProductInfo {
+  background-color: white;
+  border: solid 3px;
+  border-color: rgb(106, 106, 106);
+  height: 270px;
+  margin-bottom: 50px;
 
 }
 
-.Break{
-  border:solid 1.3px rgba(106,106,106,0.2);
-  
+.Quantity {
+  margin-right: 20px;
+}
+
+.QuantityLabel {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.img-thumbnail-product {
+  height: 270px;
+  width: 100%;
+  object-fit: contain;
+
+}
+
+.Break {
+  border: solid 1.3px rgba(106, 106, 106, 0.2);
+
 }
